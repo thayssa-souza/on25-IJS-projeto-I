@@ -4,15 +4,10 @@ const { GoldAccount } = require('./GoldAccount/GoldAccount');
 const { PremiunAccount } = require('./PremiumAccount/PremiunAccount');
 const { StandardAccount } = require('./StandardAccount/StandardAccount');
 
-const client1 = new Client("Freddy", "123-4", 3000);
-const client2 = new Client("Daphne", "567-8", 5500);
-const client3 = new Client("Velma", "912-3", 18750);
-const client4 = new Client("Scooby", "456-7", 3500);
-console.log("## CLIENTES ##");
-console.log(client1);
-console.log(client2);
-console.log(client3);
-console.log(client4);
+const client1 = new Client("Freddy", "123-4", 3000, "(11) 9999-9999", "freddy@gmail.com");
+const client2 = new Client("Daphne", "567-8", 5500, "(11) 5555-5555", "daphne@gmail.com");
+const client3 = new Client("Velma", "912-3", 18750, "(11) 8888-8888", "velma@gmail.com");
+const client4 = new Client("Scooby", "456-7", 3500, "(11) 4444-4444", "scooby@gmail.com");
 
 console.log("\n## STANDARD ACCOUNT");
 const account1 = new StandardAccount(client4, "007", "001");
@@ -58,5 +53,7 @@ account3.createPixKey("cpf", "567-8");
 account3.createPixKey("email", "daphne@gmail.com");
 account3.createPixKey("phone", "(11) 5555-5555");
 account5.createPixKey("email", "velma@gmail.com");
-console.log('---------------------');
-console.log(Account.accountCreated);
+
+console.log("\n## TRANSFERÊNCIA POR PIX ##")
+account1.transferWithPixKey("cpf", "567-8", 1000);
+account3.transferWithPixKey("email", "velma@gmail.com", 9000); //error: you don't have $9000

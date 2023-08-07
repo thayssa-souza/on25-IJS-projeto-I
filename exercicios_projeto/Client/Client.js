@@ -2,12 +2,15 @@ class Client {
     name;
     #cpf;
     #salary;
+    phone;
+    email;
 
-    constructor(name, cpf, salary){
+    constructor(name, cpf, salary, phone, email){
         this.name = name,
         this.#cpf = cpf,
-        this.#salary = salary 
-        //adc telefone e email
+        this.#salary = salary, 
+        this.phone = phone,
+        this.email = email
     }
 
     get cpf(){
