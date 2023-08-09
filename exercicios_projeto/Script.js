@@ -54,6 +54,9 @@ account3.createPixKey("email", "daphne@gmail.com");
 account3.createPixKey("phone", "(11) 5555-5555");
 account5.createPixKey("email", "velma@gmail.com");
 
+console.log("\n## CONTAS ATIVAS COM CHAVE PIX ##");
+console.log(Account.accountCreated);
+
 console.log("\n## TRANSFERÊNCIA POR PIX ##")
 account1.transferWithPixKey("cpf", "567-8", 1000);
 account3.transferWithPixKey("email", "velma@gmail.com", 9000); //error: you don't have $9000

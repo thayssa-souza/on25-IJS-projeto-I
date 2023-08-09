@@ -32,6 +32,7 @@ class GoldAccount extends Account {
             let transferResult = super.transferTo(anotherAccount, cpfAnotherCount, amount);
             if(transferResult !== false){
                 this.#transferValueTotal += amount;
+                return true;
             } else {
                 return false;
             }

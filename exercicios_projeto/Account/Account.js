@@ -90,7 +90,8 @@ class Account {
         }
 
         this.pixKey[key] = value;
-        console.log(`${this.client.name} - Key ${key} added with value ${value}`);
+        console.log(`Key ${key} added with value ${value}`);
+        return true;
     }
 
     transferWithPixKey(pixKey, pixValue, amount){
